@@ -1,0 +1,24 @@
+<h1>Hello World</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">NPWP</th>
+        <th scope="col">NAMA WP</th>
+        <th scope="col">TANGGAL DAFTAR</th>
+        <th scope="col">NIP AR</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% if (rows) { %>
+            <% for(let i = 0; i<rows.length;i++){%>
+          <tr>
+            <td><%= rows[i].NPWP %> </td>
+            <td><%= rows[i].NAMA_WP %></td>
+            <td><%= rows[i].TGL_DAFTAR.toLocaleDateString() %></td>
+            <td><%= rows[i].NIP_AR %></td>
+          </tr>
+          <% } %>
+         
+        <% } %>
+    </tbody>
+  </table>
