@@ -2,20 +2,22 @@
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">NPWP</th>
-        <th scope="col">NAMA WP</th>
-        <th scope="col">TANGGAL DAFTAR</th>
-        <th scope="col">NIP AR</th>
+        <th scope="col">IKU</th>
+        <th scope="col">TARGET %</th>
+        <th scope="col">REALISASI %</th>
+        <th scope="col">TARGET MUTLAK</th>
+        <th scope="col">REALISASI MUTLAK</th>
       </tr>
     </thead>
     <tbody>
         <% if (rows) { %>
             <% for(let i = 0; i<rows.length;i++){%>
           <tr>
-            <td><%= rows[i].NPWP %> </td>
-            <td><%= rows[i].NAMA_WP %></td>
-            <td><%= rows[i].TGL_DAFTAR.toLocaleDateString() %></td>
-            <td><%= rows[i].NIP_AR %></td>
+            <td><%= rows[i].nama_iku %> </td>
+            <td><%= rows[i].target_iku %></td>
+            <td><%= rows[i].realisasi_iku %></td>
+            <td><%= rows[i].target_mutlak %></td>
+            <td><%= rows[i].realisasi_mutlak %></td>
           </tr>
           <% } %>
          

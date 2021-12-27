@@ -13,7 +13,7 @@ exports.view = (req, res)=>{
     pool.getConnection((err, conn)=>{
         if(err) throw err;
         console.log(conn.threadId)
-        conn.query('SELECT * FROM wp LIMIT 5',(err, rows)=>{
+        conn.query('SELECT * FROM iku LIMIT 5',(err, rows)=>{
             conn.release();
             if(!err){
                 console.log(rows)
@@ -25,4 +25,10 @@ exports.view = (req, res)=>{
             }
         })
      })
+}
+exports.add = (req, res)=>{
+    res.render('addIKU',{
+        layout: 'layout',
+        title : 'Tambah IKU'
+    })
 }
